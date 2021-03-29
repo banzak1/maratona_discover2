@@ -1,8 +1,10 @@
 //biblioteca 
 const express = require("express")
+
 //rota para o express
 const routes = express.Router()
 
+// caminho views base
 const views = __dirname + "/views/"
 
 // request, response
