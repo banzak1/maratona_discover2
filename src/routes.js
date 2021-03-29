@@ -11,8 +11,8 @@ const profile = {
     name: "Banzak",
     avatar: "https://avatars.githubusercontent.com/u/17907755?v=4",
     "monthly-budget": 3000,
-    "days-per-week": 5,
     "hours-per-day": 5,
+    "days-per-week": 5,
     "vacation-per-year": 4
 }
 
