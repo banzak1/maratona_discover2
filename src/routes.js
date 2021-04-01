@@ -24,10 +24,15 @@ routes.get('/', (req, res) => res.render(views + "index"))
 routes.get('/job', (req, res) =>  res.render(views + "job"))
 routes.post('/job', (req, res) => {
 
-    const job = req.body
-    job.createdAt = new Date.now()//atribuindo uma nova data
+    const lastId = jobs[jobs.length - 1]?.id || 1;
 
-    jobs.push(req.body)
+    jobs.push({
+        id: lastId + 1,
+        name: req.body.name,
+        "daily-hours": req.body["daily-hours"],
+        "total-hours": req.body["total-hours"],
+        created_at: Date.now()
+    })
     return res.redirect('/')
 })
 routes.get('/job-edit', (req, res) =>  res.render(views + "job-edit"))
